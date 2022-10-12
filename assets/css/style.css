@@ -79,9 +79,21 @@ sub { bottom: -.25em; }
 .cf { *zoom: 1; }
 
 /*for all*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 body {
   box-sizing: border-box;
   font-family: sans-serif;
+  /* background-color: #1C3879; */
+  background-color: #F9F5EB;
+
 }
 
 a { 
@@ -99,37 +111,134 @@ li {
   max-width: 1360px;
   width: 86%; 
   margin: 0 auto;
-}
-
-/*=================================
-  Header styling starts here
-=================================*/
-
-
-
-/*=================================
-  Header styling ends here
-=================================*/  
+} 
 
 /*=================================
   main styling starts here
 =================================*/
 
+.form-validation { padding: 60px; }
 
+.form-validation .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form {
+  padding: 40px 30px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #f9f5ebce;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  color: #607EAA;
+}
+
+.form-data {
+  display: flex;
+  gap: 10px;
+}
+
+.label {
+  cursor: default;
+  width: 130px;
+  text-align: left;
+}
+
+input[type="radio"] {
+  margin: 0;
+  padding: 0;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.btn {
+  padding: 5px 20px;
+  border: 1px solid #607EAA;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #607EAA;
+  background-color: transparent;
+  transition: .5s;
+  text-transform: capitalize  ;
+}
+
+.btn:hover {
+  background-color: #607EAA;
+  color: #F9F5EB;
+}
+
+.input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #607EAA;
+  background-color: transparent;
+  color: #607EAA;
+}
+
+.input:focus {
+  border-bottom: 1px solid #001648;
+  color: #001648;
+}
+
+.datas {
+  padding: 30px 0;
+  width: 100%;
+}
+
+.datas > * { width: 100%; }
+
+.lists {
+  display: flex;
+  text-align: center;
+  border-radius: 5px;
+  align-items: center;
+}
+
+.lists > * { padding: 10px 12px; } 
+
+.heading-row {
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #607EAA;
+  color: #F9F5EB;
+}
+
+.data-row {
+  color: #607EAA;
+  box-shadow: 0px 1px 2px rgba(100, 100, 111, 0.2) ;
+}
+
+.lists li{
+  flex: 0 0 16.67%;
+  word-break: break-all; 
+}
+
+.data-row .btn { padding: 3px 18px; }
+
+.data-row .delete:hover {
+  background-color: #DD5353;
+  border: 1px solid #DD5353;
+}
+
+.data-row .edit:hover {
+  background-color: #5F9DF7;
+  border: 1px solid #5F9DF7;
+}
 
 /*=================================
   main styling ends here
 =================================*/
-
-/*=================================
-  footer styling starts here
-=================================*/ 
-
-
-
- /*=================================
-  footer styling ends here
-=================================*/ 
+ 
 
 /*media query starts*/
 /*media query for 995px starts here*/
