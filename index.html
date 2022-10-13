@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <title>Form Validation</title>
@@ -10,38 +9,52 @@
   <link rel="stylesheet" media="screen" href="assets/vendor/font-awesome/css/all.min.css">
   <link rel="stylesheet" media="screen" href="./assets/css/style.css">
 </head>
-
 <body>
   <!--container start-->
   <div class="container">
-
     <!--main section start-->
     <main>
       <section class="form-validation">
         <div class="wrapper">
-          <form action="#FIXME" method="post" class="form">
+          <div class="sucess"></div>
+          <form  method="post" class="form">
             <div class="form-data">
               <label class="label">First Name:</label>
-              <input type="text" class="input">
+              <div class="input-block">
+                <input type="text" name="First Name" class="input first-name">
+                <span class="error-text firstname-error">Error</span>
+              </div>
             </div>
             <div class="form-data">
               <label  class="label">Last Name:</label>
-              <input type="text" class="input">
+              <div class="input-block">
+                <input type="text" name="Last Name" class="input last-name">
+                <span class="error-text lastname-error">Error</span>
+              </div>
             </div>
             <div class="form-data">
               <label  class="label">Gender:</label>
-              <input type="radio" name="gender" id="male" value="male">
-              <label for="male">Male</label>
-              <input type="radio" name="gender" id="female" value="female">
-              <label for="female">Female</label>
+              <div class="input-block">
+                <div>
+                  <input type="radio" name="gender" class="gender active male" value="Male" checked>
+                  <label for="male">Male</label>
+                  <input type="radio" name="gender" class="gender female"  value="Female">
+                  <label for="female">Female</label>
+                </div>
+                <span class="error-text gender-error">Error</span>
+              </div>
             </div>
             <div class="form-data">
               <label  class="label">Address:</label>
-              <input type="text" class="input address">
+              <div class="input-block">
+                <input type="text" name="Address" class="input address">
+                <span class="error-text address-error">Error</span>
+              </div>
             </div>
-            <div class="form-data">
+            <div class="form-data checkbox">
               <input type="checkbox" name="check" id="check">
               <label for="check">Terms and Conditions</label>
+              <span class="error-text checkbox-error">Error</span>
             </div>
             <div class="form-buttons">
               <button class="submit-btn btn">Submit</button>
@@ -64,12 +77,9 @@
       </section>
     </main>
     <!--main section end-->
-
   </div>
   <!--container end-->
-
   <!-- <script src="js/vendors/jquery-1.8.3.min.js"></script> -->
   <script src="./assets/js/script.js"></script>
 </body>
-
 </html>
