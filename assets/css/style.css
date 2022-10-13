@@ -2,7 +2,6 @@
 /* ==========================================================================
    1. CSS Reset Code
    ========================================================================== */
-
 /* 1.1. Eric Meyers Reset
    http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -21,19 +20,15 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline;
 }
-
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
-
 /* Force scrollbar */
 html { overflow-y: scroll; }
-
 /* Align radios and text inputs with their label */
 input[type='radio'] { vertical-align: text-bottom; }
-
 /* Hand cursor on clickable input elements */
 label,
 input[type='button'],
@@ -41,21 +36,17 @@ input[type='submit'],
 button {
   cursor: pointer;
 }
-
 strong {
   font-weight: bold;
   font-family: inherit;
   font-size: inherit;
 }
-
 em { font-style: italic; }
-
 img {
   width: 100%;
   border: 0;
   vertical-align: middle;
 }
-
 sub,
 sup {
   vertical-align: baseline;
@@ -63,23 +54,17 @@ sup {
   font-size: 55%;
   line-height: 0;
 }
-
 sup { top: -.7em; }
 sub { bottom: -.25em; }
-
 /* 1.2. Clear Fix ========================== */
-
 .cf:before,
 .cf:after {
   display: table;
   content: " ";
 }
-
 .cf:after { clear: both; }
 .cf { *zoom: 1; }
-
 /*for all*/
-
 *,
 *::before,
 *::after {
@@ -87,45 +72,36 @@ sub { bottom: -.25em; }
   padding: 0;
   margin: 0;
 }
-
 body {
   box-sizing: border-box;
   font-family: sans-serif;
   /* background-color: #1C3879; */
   background-color: #F9F5EB;
-
 }
-
-a { 
+a {
   display: inline-block;
-  text-decoration: none; 
+  text-decoration: none;
 }
-
 li {
   display: inline-block;
   list-style-type: none;
 }
-
 /* for wrapper */
 .wrapper {
   max-width: 1360px;
-  width: 86%; 
+  width: 86%;
   margin: 0 auto;
-} 
-
+}
 /*=================================
   main styling starts here
 =================================*/
-
 .form-validation { padding: 60px; }
-
 .form-validation .wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-
 .form {
   padding: 40px 30px;
   border-radius: 15px;
@@ -137,30 +113,39 @@ li {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   color: #607EAA;
 }
-
 .form-data {
   display: flex;
   gap: 10px;
 }
-
 .label {
   cursor: default;
   width: 130px;
   text-align: left;
 }
-
+.error-text,
+.checkbox {
+  display: block;
+}
+.form-data .error-active,
+.input-block .error-active {
+  display: block;
+}
+.error-text {
+  padding: 5px 0;
+  color: #DD5353;
+  font-size: 12px;
+  display: none;
+}
 input[type="radio"] {
   margin: 0;
   padding: 0;
 }
-
 .form-buttons {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 15px;
 }
-
 .btn {
   padding: 5px 20px;
   border: 1px solid #607EAA;
@@ -171,12 +156,10 @@ input[type="radio"] {
   transition: .5s;
   text-transform: capitalize  ;
 }
-
 .btn:hover {
   background-color: #607EAA;
   color: #F9F5EB;
 }
-
 .input {
   outline: none;
   border: none;
@@ -184,62 +167,101 @@ input[type="radio"] {
   background-color: transparent;
   color: #607EAA;
 }
-
+.active { border-bottom: 1px solid #DD5353; }
+.gender { accent-color: #607EAA; }
 .input:focus {
   border-bottom: 1px solid #001648;
   color: #001648;
 }
-
 .datas {
   padding: 30px 0;
   width: 100%;
 }
-
 .datas > * { width: 100%; }
-
 .lists {
   display: flex;
   text-align: center;
   border-radius: 5px;
   align-items: center;
 }
-
-.lists > * { padding: 10px 12px; } 
-
+.lists > * { padding: 10px 12px; }
 .heading-row {
   font-size: 16px;
   font-weight: 600;
   background-color: #607EAA;
   color: #F9F5EB;
 }
-
 .data-row {
   color: #607EAA;
   box-shadow: 0px 1px 2px rgba(100, 100, 111, 0.2) ;
 }
-
 .lists li{
   flex: 0 0 16.67%;
-  word-break: break-all; 
+  word-break: break-all;
 }
-
 .data-row .btn { padding: 3px 18px; }
-
 .data-row .delete:hover {
   background-color: #DD5353;
   border: 1px solid #DD5353;
 }
-
 .data-row .edit:hover {
   background-color: #5F9DF7;
   border: 1px solid #5F9DF7;
 }
-
+.thank-you {
+width: 500px;
+padding: 20px;
+border-radius: 10px;
+margin: 20px;
+position: relative;
+background-color: #AEDBCE;
+transition: .7s;
+}
+.icon::before{
+  content: '\f058';
+  padding: 0 10px 0 0;
+  font-family: 'FontAwesome';
+  font-size: 40px;
+  color: #59CE8F;
+  animation: icon .8s  forwards ;
+}
+@keyframes icon {
+  0% { transform: scaleX(-1);}
+  50% { transform: scaleX(1);}
+  75% { transform: scaleX(-1);}
+  100% { transform: scaleX(1); }
+}
+.icon {
+  padding: 0 0 10px;
+  font-size: 28px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+.go-back {
+  display: block;
+  text-indent: -9999px;
+}
+.go-back::after {
+  content: "\f00d";
+  padding: 10px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  font-family: "FontAwesome";
+  display: block;
+  text-indent: 0;
+  float: right;
+  font-size: 18px;
+  color: #AEDBCE;
+  background-color: #607EAA;
+  transform: translateY(-120%);
+  cursor: pointer;
+}
 /*=================================
   main styling ends here
 =================================*/
- 
-
 /*media query starts*/
 /*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {}  
+@media only screen and (max-width: 995px) {}
